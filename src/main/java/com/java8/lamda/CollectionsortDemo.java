@@ -45,9 +45,9 @@ class Employee{
 }
 public class CollectionsortDemo {
     public static void main(String s[]) {
-        List<Employee> emplist = new ArrayList();
+        List<Employee> emplist =new ArrayList();
 
-        Employee selva = new Employee();
+        /*Employee selva = new Employee();
         selva.setId(11);
         selva.setName("Selva");
         emplist.add(selva);
@@ -57,7 +57,14 @@ public class CollectionsortDemo {
         elaya.setName("Elaya");
         emplist.add(elaya);
 
-        System.out.println("Before="+emplist);
+        Employee bai = new Employee();
+        bai.setId(22);
+        bai.setName("bai");
+        emplist.add(bai);*/
+
+        Employee firstelement= emplist.stream().findFirst().get();
+
+        System.out.println("firstelement="+firstelement);
         //Collections.sort(emplist,(Employee o1, Employee o2) -> o1.getName().compareTo(o2.getName()));
         //System.out.println("After="+emplist);
 
@@ -65,6 +72,6 @@ public class CollectionsortDemo {
 
         //emplist.stream().sorted(Comparator.comparing(emp -> emp.getName())).forEach(System.out::println);
 
-        emplist.stream().sorted(Comparator.comparing(Employee::getId)).forEach(System.out::println);
+        //emplist.stream().sorted(Comparator.comparing(Employee::getId)).forEach(System.out::println);
     }
 }
