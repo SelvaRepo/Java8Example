@@ -9,7 +9,7 @@ public class BranchClass {
 
       public static void main(String[] args) {
 
-        String email = "selva@matson.com";
+        String email = "selva@matson.comTesting";
 
         System.out.println("=="+email.indexOf("."));
         System.out.println("UserName =="+email.substring(0,email.indexOf("@")));
